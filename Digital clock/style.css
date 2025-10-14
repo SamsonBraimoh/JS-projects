@@ -29,3 +29,20 @@ html, body{
 #date{
     font-size: 1.5rem;
 }
+audio{
+    display: none;
+}
+@media(max-width: 760px){
+    html{
+        font-size: 10px;
+    }
+}
+button{
+    background-color: saddlebrown;
+    color: bisque;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-family: sans-serif;
+    box-shadow: 2px 2px 2px saddlebrown;
+}

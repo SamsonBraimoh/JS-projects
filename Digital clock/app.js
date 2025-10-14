@@ -31,3 +31,35 @@ const updateClock = () => {
 } 
 setInterval(updateClock, 1000);
 updateClock();
+
+// const tick = () => {
+//     const sound = document.getElementById("second");
+//     sound.currentTime = 0;
+//     sound.play();
+// }
+// setInterval(tick, 1000);
+// tick();
+
+const sound = document.getElementById("second");
+const control = document.getElementById("toggleButton");
+
+let ticking = false;
+let interval = null;
+
+const tick = () => {
+//  sound.currentTime = 0;
+ sound.play();
+};
+
+toggleButton.addEventListener("click", () => {
+    if(!ticking){
+        ticking = true;
+        control.textContent = "Disable sound";
+        interval = setInterval(tick, 1000);
+        tick();
+    } else {
+        ticking = false;
+        control.textContent = "Enable sound";
+        clearInterval(interval);
+    }
+})
